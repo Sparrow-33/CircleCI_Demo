@@ -1,0 +1,21 @@
+<apex:page controller="AboutAccounts">
+    <apex:form >
+        <apex:pageBlock title="Active Account List" id="active_account_list">
+            <apex:pageBlockTable value="{!ActiveAccounts}" var="c">
+                <apex:column headerValue="Account Name">
+                    <apex:outputLink value="/{!c.Id}">
+                        {!c.Name}
+                    </apex:outputLink>
+                </apex:column>
+                <apex:column value="{!c.Industry}" />
+                <apex:column headerValue="Active">
+                    <apex:inputField value="{!c.Active__c}" />
+                    <!-- <apex:variable var="modifiedAccounts" value="{!IF(c.Active__c != c.Active__c prior, modifiedAccounts, modifiedAccounts + c)}" /> -->
+                </apex:column>    
+            </apex:pageBlockTable>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="save" action="{!deactivateAccounts}" rerender="active_account_list"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

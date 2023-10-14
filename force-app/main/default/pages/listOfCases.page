@@ -1,0 +1,15 @@
+<apex:page controller="AboutCases">
+   <apex:form >
+        <apex:pageBlock title="New Cases List" id="new_cases_list">
+            <apex:pageBlockTable value="{! CaseWithNewStatus}" var="c">
+              <apex:column headerValue="Case ID" >
+                  <apex:outputLink value="/{!c.Id}">
+                      {!c.CaseNumber}
+                  </apex:outputLink>
+                </apex:column>
+                <apex:column value="{!c.Reason}"/> 
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

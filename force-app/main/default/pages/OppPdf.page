@@ -1,0 +1,36 @@
+<apex:page renderAs="pdf">
+  <html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid;
+}
+</style>
+</head>
+<body>
+
+<h2>Add a border to a table:</h2>
+
+<table>
+  <tr>
+    <th>Nom Opportunité</th>
+    <th>Montant en USD</th>
+    <th>Montant en DH</th>  
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>100</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Lois</td>
+    <td>100</td>
+    <td>10</td>  
+  </tr>
+</table>
+
+</body>
+</html>
+    
+    
+</apex:page>

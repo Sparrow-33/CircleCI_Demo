@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Contacts" icon-name="standard:contact">
+        <div class="slds-m-around_medium">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="6" padding="around-small"></lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input type="search" label="Search Account"  value={searchKey} onblur={handleSearch} ></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-datatable
+                key-field="id"
+                data={FIELDS}
+                columns={columns}>
+        </lightning-datatable>
+    </div>
+    </lightning-card>
+</template>

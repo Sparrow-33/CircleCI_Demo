@@ -1,0 +1,19 @@
+<template>
+   <main 
+    style="display:flex; width:1500px; gap:20px; padding:2em; background:antiquewhite;">
+    <div style="display:flex; width:100vw; gap:20px;">
+        <template for:each={movies} for:item="movie">
+        <c-child1 key={movie.id}
+         movie={movie}
+         onmovieclick={handleMovieClick}
+        ></c-child1>
+        </template>
+    </div>
+
+    <div style="width:500px; height:900px; background-color:aliceblue">
+         <c-child2 movie={selectedMovie}></c-child2>
+    </div>
+  
+   </main>
+
+</template>

@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+body{
+    margin: 0;
+  }
+  .price {
+    color: green;
+    font-weight: bold;
+  }
